@@ -78,10 +78,12 @@ const using = {
   time: "",
 };
 
-function changing(action) {
+async function changing(action) {
   let finalId;
   if (get) {
-    Cogitation_Works = JSON.parse(localStorage.getItem("Cogitation_Works"));
+    Cogitation_Works = await JSON.parse(
+      localStorage.getItem("Cogitation_Works")
+    );
     finalId = Cogitation_Works.id;
   } else {
     Cogitation_Works = {
@@ -148,16 +150,16 @@ function changing(action) {
   deviceId.classList.remove("d-none");
 
   Cogitation_Works.active = action == "In" ? true : false;
-
+  get = true;
   window.localStorage.setItem(
     "Cogitation_Works",
     JSON.stringify(Cogitation_Works)
   );
 }
 
-history.addEventListener("click", (e) => {
-  const formatted = JSON.stringify(
-    JSON.parse(window.localStorage.getItem("Cogitation_Works")).history ,
+history.addEventListener("click", async () => {
+  const formatted = await JSON.stringify(
+    JSON.parse(window.localStorage.getItem("Cogitation_Works")).history,
     null,
     2
   );
