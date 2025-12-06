@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MotoAdmin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/MULLAIVENDAN22/Custom-Bootstrap@latest/customized_bootstrap.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      font-family: "Poppins", sans-serif;
+      /* overflow-y: scroll; */
+    }
+    input::placeholder {
+      font-size: 14px;
+      color: rgb(198, 198, 198);
+    }
+    .design {
+      background: #653fc4;
+      background: linear-gradient(
+        143deg,
+        rgba(101, 63, 196, 1) 53%,
+        rgba(186, 48, 168, 1) 95%
+      );
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .miniA:hover {
+      text-decoration: underline !important;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div
+      class="container-fluid h-100 w-100"
+      style="
+        background: #653fc4;
+        background: linear-gradient(
+          143deg,
+          rgba(101, 63, 196, 1) 53%,
+          rgba(186, 48, 168, 1) 95%
+        );
+      "
+    >
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-4 col-sm-11 col-vs-11">
+          <div class="card px-4 py-4" style="border-radius: 10px">
+            <div class="px-3">
+              <div class="d-flex flex-row align-items-center">
+                <div class="me-2">
+                  <img
+                    style="height: 50px; width: 50px; border-radius: 50%"
+                    class="img-fluid"
+                    src="https://cdn.pixabay.com/photo/2016/12/27/13/10/logo-1933884_1280.png"
+                    alt=""
+                  />
+                </div>
+                <h2
+                  class="fw-bold ms-lg-2 ms-md-2 fs-vs-1 fs-sm-1 fs-md-2 fs-lg-2"
+                  style="color: rgba(51, 51, 51, 0.981)"
+                >
+                  Cogitation Works
+                </h2>
+              </div>
+              <div class="sheet">
+                <h3
+                  class="text-center fw-semibold mt-3"
+                  style="color: rgba(73, 73, 73, 0.872)"
+                >
+                  Attendence Sheet
+                </h3>
+                <div class="mt-4">
+                  <h6 class="fw-semibold text-center deviceId d-none">
+                    Your Device Id : DNC237391388
+                  </h6>
+                </div>
+                <div
+                  class="mt-3 d-none success d-flex flex-row align-items-center justify-content-center"
+                ></div>
+                <div class="d-flex flex-row w-100 mt-5" style="gap: 5%">
+                  <button
+                    type="button"
+                    class="py-3 fw-semibold fs-6 w-50 signIn btn btn-success"
+                  >
+                    Sign In
+                  </button>
+                  <button
+                    type="button"
+                    class="py-3 fw-semibold fs-6 w-50 signOut btn btn-danger"
+                  >
+                    Sign Out
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  class="mt-4 w-100 py-3 fw-semibold fs-6 design history"
+                >
+                  History
+                </button>
+              </div>
+              <div class="attendence d-none">
+                <div class="overflow-scroll" style="height: 300px"></div>
+                <button
+                  type="button"
+                  class="mt-4 w-100 py-3 fw-semibold fs-6 design"
+                >
+                  Back
+                </button>
+              </div>
+              <h6 class="text-center text-secondary mt-4">
+                any errors, Please Contact
+                <a
+                  href="https://mullaivendan22.github.io/neoiconTasks/portfolio%20website/"
+                  class="text-primary text-decoration-none miniA fw-semibold"
+                  >MV</a
+                >
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
