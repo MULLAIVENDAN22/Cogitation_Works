@@ -1,0 +1,15 @@
+Cogitation Works Report
+
+----------------------------------------------------------------------------------------------------
+
+12/6/2025 
+
+8:30              - work started
+8:30 to 12:30     - Attendance project finished
+12:30 to 1:30	  - facing errors and pushing in GitHub
+2:50 to 5:00      - studied about react, jsx, what is component, what the role of main.jsx,
+		    what is babel and how it converts jsx into js, what are keys and how they are 		    playing major role in optimization(making virtual dom and comparing), what is 		    props and how to make props clear with its prototype, what are all the data
+ 		    types the props can pass, js defining inside {}, className instead of class, 
+		    styles are defined inside {{ }}    
+
+----------------------------------------------------------------------------------------------------

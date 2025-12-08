@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/MULLAIVENDAN22/Custom-Bootstrap@latest/customized_bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      nav a {
+        text-decoration: none;
+        color: #264fd4;
+      }
+      ul li a {
+        color: rgb(108, 108, 108) !important;
+      }
+      header {
+        position: sticky;
+        top: 0;
+      }
+      .sidebtn {
+        background-color: #264fd4;
+      }
+      input::placeholder {
+        color: white !important;
+      }
+      .bluech:hover {
+        color: #264fd4;
+      }
+      .col-12 a {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="px-5 my-4" style="background-color: inherit; z-index: 5">
+      <nav class="navbar navbar-expand-lg">
+        <a class="fs-1 fw-bold">pintola</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#target"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="list collapse navbar-collapse" id="target">
+          <ul class="navbar-nav ms-auto">
+            <li class="na-item me-2">
+              <a href="#home" class="nav-link fs-5">Home</a>
+            </li>
+            <li class="na-item me-2">
+              <a href="#product" class="nav-link fs-5">Product</a>
+            </li>
+            <li class="na-item me-2">
+              <a href="#about" class="nav-link fs-5">About</a>
+            </li>
+            <li class="na-item me-2">
+              <a href="#contact" class="nav-link fs-5">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container mt-4 mb-5">
+      <div class="row g-0" id="home">
+        <div
+          class="col-lg-7 col-md-7 col-12 col-sm-12 order-sm-2 order-2 order-lg-1 order-md-1 py-5 px-sm-3 px-vs-3 px-lg-5 px-md-5"
+          style="background-color: rgb(244, 244, 244)"
+        >
+          <div class="side d-flex flex-column justify-content-center">
+            <h1 class="fw-semibold mt-4" style="color: rgba(39, 39, 39, 0.701)">
+              Fuel your body, feed your soul.
+            </h1>
+            <h1 class="mt-3 fw-bold" style="font-size: 50px">
+              Nutrition Lovers
+            </h1>
+            <p class="fw-medium mt-3 fs-5">
+              Nutrition: the ultimate performance booster.
+            </p>
+            <h3 class="mt-4 fs-2" style="color: #264fd4">
+              All Natural Peanut Butter
+            </h3>
+            <div
+              class="mt-sm-1 mt-vs-1 mt-lg-5 mt-md-5 pt-3"
+              style="width: 150px"
+            >
+              <button
+                class="btn text-light fw-semibold mt-3"
+                type="button"
+                style="
+                  height: 50px;
+                  width: 150px;
+                  background-color: rgba(55, 55, 55, 0.958);
+                "
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-5 col-md-7 col-12 col-sm-12 order-sm-1 order-1 order-lg-2 order-md-2 mt-sm-5 mt-vs-5 mt-lg-0 mt-md-0"
+        >
+          <div class="side">
+            <img
+              class="img-fluid"
+              style="object-fit: cover"
+              src="https://pintola.in/cdn/shop/files/All_Natural_Creamy_350gm_600x600_9d3cc337-ace9-4fed-bc7f-1cbfd070ecfe_800x.jpg?v=1742190418"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-lg-11 col-md-11 col-sm-12 col-12">
+          <div
+            class="d-flex flex-row justify-content-lg-end justify-content-md-end justify-content-vs-center justify-content-sm-center"
+          >
+            <div class="sidebtn px-2 py-3 me-4">
+              <i class="fa-solid fa-chevron-left fs-2" style="color: white"></i>
+            </div>
+            <div class="sidebtn px-2 py-3">
+              <i
+                class="fa-solid fa-chevron-right fs-2"
+                style="color: white"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 pt-5 px-2" id="product">
+        <h1 class="fw-semibold" style="font-size: 35px">Product</h1>
+        <div class="swiper px-3">
+          <div class="swiper-wrapper py-4">
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/01-11_d446c524-4dc6-4543-ae82-d3fdfe7428e2_800x.jpg?v=1751603962"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      High Protein Dark Chocolate Oats
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Rich cocoa flavor meets wholesome oats for lasting energy.
+                      A delicious way to fuel your day.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Muesli_Fruit_N_Nut-350gm_600x600_bd9995af-6238-42e9-9f82-c59828daed8b_800x.jpg?v=1732090939"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Fruit & Nut Muesli
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Crunchy nuts and chewy fruits come together for natural
+                      goodness. A wholesome start to every morning.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Rice_Cake-All_Natural_Unsalted_600x600_c69c4f04-a777-43f2-a404-2cdb393220bf_800x.jpg?v=1732020066"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Organic Wholegrain Brown Rice Cakes
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Light, crunchy, and naturally wholesome with every bite. A
+                      guilt‑free snack that keeps you satisfied.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Peri_Peri_Cashew_600x600_d0d7460a-f7c8-4516-8432-4c297d91e43d_400x.jpg?v=1732019854"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Premium Peri Peri Cashew Dry Roasted
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Fiery peri peri spice meets crunchy cashews for a bold
+                      kick. A premium snack to excite.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Almond_600x600_ee85eda3-23e8-473d-acab-fe17cc5a3e4b_800x.jpg?v=1732017590"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Premium Roasted & Salted Almonds
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Perfectly roasted with a touch of salt for rich crunch. A
+                      classic snack crafted for pure delight.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Pistachios_600x600_915541c2-6670-4c82-9a69-e0bf6e86245b_800x.jpg?v=1732019900"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Premium Roasted & Salted Pistachios
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Perfectly roasted with a hint of salt for rich flavor. A
+                      crunchy snack made to savor.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Chia_Seeds-250gm_600x600_239f1e21-54c5-47cc-ba94-64a58d724773_800x.jpg?v=1732017906"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Premium Organic Chia Seeds
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Tiny seeds packed with natural protein, fiber, and
+                      omega‑3s. A wholesome boost for everyday wellness.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Nuts_Berries_600x600_5d489194-4328-4856-961a-4fa481bd9459_400x.jpg?v=1732019807"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Premium 8 in 1 Mix Nuts & Berries
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      A rich blend of crunchy nuts and sweet berries for natural
+                      variety. Wholesome goodness in every handful.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Sunflower_Seeds-250gm_600x600_faca09fd-9b28-43a6-9800-4b8ebbe21e8f_800x.jpg?v=1732020208"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Premium Sunflower Seeds
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Light, crunchy, and naturally rich in nutrients. A
+                      wholesome snack to keep you energized.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="border-none"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                  width: 100%;
+                "
+              >
+                <div>
+                  <img
+                    src="https://pintola.in/cdn/shop/files/Pumpkin_Seeds-250gm_600x600_73079f5d-b122-4986-9699-a4ad87102213_800x.jpg?v=1732019955"
+                    class="img-fluid"
+                    style="width: 100%; height: auto; object-fit: cover"
+                    alt=""
+                  />
+                </div>
+                <div class="px-2 mt-2 px-3 py-3">
+                  <div style="font-family: 'Montserrat', sans-serif">
+                    <h5
+                      class="fw-semibold"
+                      style="color: rgb(53, 53, 53); height: 50px"
+                    >
+                      Premium Pumpkin Seeds
+                    </h5>
+                    <p
+                      class="fw-medium"
+                      style="font-size: 13px; color: rgb(112, 112, 112)"
+                    >
+                      Crunchy, nutrient‑rich seeds packed with protein and
+                      fiber. A wholesome snack to power your day.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button type="button" class="btn btn-primary fw-medium">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5" id="about">
+        <h1 class="fw-semibold" style="font-size: 35px">About</h1>
+        <div
+          class="col-lg-8 col-md-8 col-sm-12 col-12 order-sm-2 order-2 order-lg-1 order-md-1"
+        >
+          <h2
+            class="mt-lg-3 mt-md-3 mt-sm-5 mt-vs-5 text-sm-center text-vs-center"
+            style="color: #264fd4"
+          >
+            Your nutrient‑rich Store Around the Corner
+          </h2>
+          <div class="px-lg-0 px-md-0 px-sm-2 px-vs-2 mt-sm-4 mt-vs-4">
+            <p
+              class="fw-semibold text-secondary text-sm-justify text-vs-justify mt-3 p-0 fs-5"
+              style="text-indent: 50px"
+            >
+              Crafted with care and a passion for wholesome living, our
+              collection brings together nature’s finest ingredients in every
+              bite. From the indulgent richness of dark chocolate oats to the
+              fiery crunch of peri peri cashews, each product is designed to
+              balance taste with nutrition.
+            </p>
+            <p
+              class="fw-semibold text-secondary text-sm-justify text-vs-justify p-0 fs-5"
+              style="text-indent: 50px"
+            >
+              Our roasted and salted almonds, pistachios, and mixed nuts with
+              berries deliver timeless snacking classics, while organic chia,
+              sunflower, and pumpkin seeds provide a natural boost of protein,
+              fiber, and essential nutrients. For those who prefer lighter
+              options, our wholegrain rice cakes and fruit‑filled muesli offer
+              guilt‑free energy to start the day right
+            </p>
+            <p
+              class="fw-semibold text-secondary text-sm-justify text-vs-justify p-0 fs-5"
+              style="text-indent: 50px"
+            >
+              Every pack reflects our commitment to purity, flavor, and wellness
+              — giving you snacks that are not only delicious but also
+              nourishing. Whether you’re fueling your workouts, satisfying
+              mid‑day cravings, or simply enjoying mindful eating, our premium
+              range is made to support your lifestyle with taste you can trust.
+            </p>
+          </div>
+        </div>
+        <div
+          class="col-lg-4 col-md-4 col-sm-12 col-12 order-sm-1 order-1 order-lg-2 order-md-2"
+        >
+          <div class="d-flex justify-content-center align-items-center mt-4">
+            <img
+              class="img-fluid"
+              style="object-fit: cover; height: 300p"
+              src="https://pintola.in/cdn/shop/files/Home-Page-Banner-01_Mobile_GST_1600x.jpg?v=1758196929"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5" id="contact">
+        <h1 class="fw-semibold" style="font-size: 35px">Contact</h1>
+        <div class="col-12">
+          <h2
+            class="fw-semibold text-center mt-3"
+            style="font-size: 30px; color: #264fd4"
+          >
+            Follow Us On Instagram @Pintola.in
+          </h2>
+          <div
+            class="mt-5"
+            style="height: 3px; background-color: rgba(105, 105, 105, 0.836)"
+          ></div>
+        </div>
+      </div>
+      <div class="row g-4 mt-3 px-lg-1 px-md-1 px-vs-3 px-sm-3">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+          <div class="px-2">
+            <div>
+              <p class="fw-semibold" style="color: #616161">
+                Our premium collection blends taste with nutrition, offering
+                wholesome snacks and superfoods. From rich oats and roasted nuts
+                to nutrient‑packed seeds, every bite fuels wellness. Crafted
+                with care, each product delivers purity, flavor, and energy you
+                can trust.
+              </p>
+            </div>
+            <div class="d-flex flex-row text-light mt-4" style="gap: 3%">
+              <div>
+                <i
+                  class="fa-brands fa-facebook-f fs-5 text-light orangebg"
+                  style="
+                    display: grid;
+                    place-items: center;
+                    background-color: black;
+                    border: 1px solid #a2a2a2;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                  "
+                ></i>
+              </div>
+              <div>
+                <i
+                  class="fa-brands fa-twitter fs-5 text-light orangebg"
+                  style="
+                    display: grid;
+                    place-items: center;
+                    background-color: black;
+                    border: 1px solid #a2a2a2;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                  "
+                ></i>
+              </div>
+              <div>
+                <i
+                  class="fa-brands fa-linkedin fs-5 text-light orangebg"
+                  style="
+                    display: grid;
+                    place-items: center;
+                    background-color: black;
+                    border: 1px solid #a2a2a2;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                  "
+                ></i>
+              </div>
+              <div>
+                <i
+                  class="fa-brands fa-youtube fs-5 text-light orangebg"
+                  style="
+                    display: grid;
+                    place-items: center;
+                    background-color: black;
+                    border: 1px solid #a2a2a2;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                  "
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+          <div
+            class="ms-lg-5 ms-md-5 mt-vs-5 mt-sm-5 px-lg-0 px-md-0 px-vs-4 px-sm-4 mt-lg-0 mt-md-0"
+          >
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="">
+                  <h3 class="fw-semibold">Shop</h3>
+                </div>
+                <div class="">
+                  <div class="d-flex flex-column">
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      All Products</a
+                    >
+
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      Natural Peanut Butter</a
+                    >
+
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      Premium Nut Butters</a
+                    >
+
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      High Protein & Performance Butter</a
+                    >
+
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      Certified Organic Products</a
+                    >
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      Nuts & seeds</a
+                    >
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      Rice Cakes</a
+                    >
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      High Protein Breakfast Cereals</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-lg-0 mt-md-0 mt-sm-5 mt-vs-5">
+                <div class="">
+                  <h3 class="fw-semibold">Pintola</h3>
+                </div>
+                <div class="">
+                  <div class="d-flex flex-column">
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#about"
+                    >
+                      About Us</a
+                    >
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      Recipes</a
+                    >
+
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#about"
+                    >
+                      Why Pintola?</a
+                    >
+
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      Privacy Policy</a
+                    >
+
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      Terms of Service</a
+                    >
+                    <a
+                      class="mt-3 fw-medium text-decoration-none bluech"
+                      href="#"
+                    >
+                      FAQs</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+          <div
+            class="px-lg-5 px-md-5 px-vs-3 px-sm-3 mt-vs-5 mt-sm-5 mt-lg-0 mt-md-0"
+          >
+            <div>
+              <h4 class="fw-semibold">Newsletter</h4>
+            </div>
+            <div class="mt-4">
+              <p class="">
+                At vero eos et accusamus et iusto odio as part dignissimos
+                ducimus qui blandit.
+              </p>
+            </div>
+            <div
+              class="mt-5 d-flex flex-row justify-content-center position-relative"
+            >
+              <input
+                type="text"
+                class="form-control py-3 ps-3 pe-5 text-light"
+                placeholder="Enter your email"
+                style="background-color: #343434; border: none"
+              />
+              <button
+                class="btn text-light mt-2 fs-5 me-1 fw-semibold px-2 py-1 position-absolute end-0"
+                style="background-color: #264fd4"
+              >
+                Go
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-5"
+          style="height: 3px; background-color: rgba(105, 105, 105, 0.836)"
+        ></div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-lg-12 mb-vs-5 mb-sm-5 mb-lg-0 mb-md-0">
+          <div class="mt-5">
+            <h6
+              class="text-light text-center fw-semibold mb-vs-5 mb-sm-5 mb-lg-0 mb-md-0"
+              style="color: #575757 !important"
+            >
+              Copyright © 2024
+              <span style="color: #264fd4">Pintola</span>. All rights reserved.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 4,
+        spaceBetween: 35,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          // VS / SM screens (up to 767px)
+          0: {
+            // from 0px width
+            slidesPerView: 1,
+          },
+          576: {
+            // sm breakpoint (>=576px)
+            slidesPerView: 1,
+          },
+          768: {
+            // md breakpoint (>=768px)
+            slidesPerView: 4,
+          },
+          992: {
+            // lg breakpoint (>=992px)
+            slidesPerView: 4,
+          },
+          // You can also add xl (>=1200px) if needed
+        },
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
