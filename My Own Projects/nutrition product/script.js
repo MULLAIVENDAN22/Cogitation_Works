@@ -24,13 +24,12 @@ const side = document.querySelectorAll(".side");
 
 sideBtn[1].addEventListener("click", (e) => {
   e.preventDefault();
-  if (sidecount > sideArray.length -1) {
+  if (sidecount > sideArray.length - 2) {
     return;
   }
   sidecount++;
   console.log(sidecount, " next is clicked");
 
-  
   side[0].innerHTML = ` <h1 class="fw-semibold mt-4" style="color: rgba(39, 39, 39, 0.701)">
               Fuel your body, feed your soul.
             </h1>
@@ -41,7 +40,7 @@ sideBtn[1].addEventListener("click", (e) => {
               Nutrition: the ultimate performance booster.
             </p>
             <h3 class="mt-4 fs-2" style="color: #264fd4">
-              All Natural Peanut Butter
+              ${sideArray[sidecount].h3}
             </h3>
             <div
               class="mt-sm-1 mt-vs-1 mt-lg-5 mt-md-5 pt-3"
@@ -70,12 +69,12 @@ sideBtn[1].addEventListener("click", (e) => {
 });
 
 sideBtn[0].addEventListener("click", () => {
+  if (sidecount-1 < 0) {
+    return;
+  }
   sidecount--;
   console.log(sidecount, " next is clicked");
 
-  if (sidecount < 0) {
-    return;
-  }
   side[0].innerHTML = `<h1 class="fw-semibold mt-4" style="color: rgba(39, 39, 39, 0.701)">
               Fuel your body, feed your soul.
             </h1>
@@ -86,7 +85,7 @@ sideBtn[0].addEventListener("click", () => {
               Nutrition: the ultimate performance booster.
             </p>
             <h3 class="mt-4 fs-2" style="color: #264fd4">
-              All Natural Peanut Butter
+              ${sideArray[sidecount].h3}
             </h3>
             <div
               class="mt-sm-1 mt-vs-1 mt-lg-5 mt-md-5 pt-3"
@@ -126,5 +125,3 @@ document.querySelectorAll("ul li a").forEach((a) => {
     });
   });
 });
-
-
