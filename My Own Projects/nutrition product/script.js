@@ -65,13 +65,24 @@ sideBtn[0].addEventListener("click", () => {
   if (sidecount < 0) {
     return;
   }
-  side[0].innerHTML = ` <h1 class="fw-semibold">Real Icream For Real Ice</h1>
-            <h1>Cream Lovers</h1>
-            <p class="fw-medium mt-3 fs-5">Sweet Icream for Pleasure Seekers</p>
-            <h3 class="mt-4" style="color: #264fd4">${sideArray[sidecount].h3}</h3>
-            <button class="btn btn-secondary fw-medium mt-3" type="button">
-              Buy Now
-            </button>`;
+  side[0].innerHTML = ` <h1 class="fw-semibold mt-4" style="color: rgba(39, 39, 39, 0.701);">Fuel your body, feed your soul.</h1>
+            <h1 class="mt-3 fw-bold" style="font-size: 50px;">Nutrition Lovers</h1>
+            <p class="fw-medium mt-3 fs-5">
+              Nutrition: the ultimate performance booster.
+            </p>
+            <h3 class="mt-4 fs-2" style="color: #264fd4">
+             ${sideArray[sidecount].h3}
+            </h3>
+            <div class="mt-5 pt-3" style="width: 150px;">
+              <button
+                class="btn text-light fw-semibold mt-3"
+                type="button"
+                style="height: 50px; width: 150px; background-color: rgba(136, 136, 136, 0.958);"
+                
+              >
+                Buy Now
+              </button>
+            </div> `;
 
   side[1].innerHTML = ` <img
               class="img-fluid"
@@ -89,12 +100,11 @@ document.querySelectorAll("ul li a").forEach((a) => {
     const topPos = target.getBoundingClientRect().top + window.pageYOffset;
 
     window.scrollTo({
-      top: topPos - 100,   // 👈 offset of 100px
+      top: topPos - 100, // 👈 offset of 100px
       behavior: "smooth",
     });
   });
 });
-
 
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
