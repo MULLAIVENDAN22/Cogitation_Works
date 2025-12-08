@@ -42,8 +42,11 @@ sideBtn[1].addEventListener("click", (e) => {
               <button
                 class="btn text-light fw-semibold mt-3"
                 type="button"
-                style="height: 50px; width: 150px; background-color: rgba(136, 136, 136, 0.958);"
-                
+                style="
+                  height: 50px;
+                  width: 150px;
+                  background-color: rgba(55, 55, 55, 0.958);
+                "
               >
                 Buy Now
               </button>
@@ -77,8 +80,11 @@ sideBtn[0].addEventListener("click", () => {
               <button
                 class="btn text-light fw-semibold mt-3"
                 type="button"
-                style="height: 50px; width: 150px; background-color: rgba(136, 136, 136, 0.958);"
-                
+                style="
+                  height: 50px;
+                  width: 150px;
+                  background-color: rgba(55, 55, 55, 0.958);
+                "
               >
                 Buy Now
               </button>
