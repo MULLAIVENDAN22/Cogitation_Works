@@ -24,21 +24,29 @@ const side = document.querySelectorAll(".side");
 
 sideBtn[1].addEventListener("click", (e) => {
   e.preventDefault();
+  if (sidecount > sideArray.length -1) {
+    return;
+  }
   sidecount++;
   console.log(sidecount, " next is clicked");
 
-  if (sidecount > 1) {
-    return;
-  }
-  side[0].innerHTML = ` <h1 class="fw-semibold mt-4" style="color: rgba(39, 39, 39, 0.701);">Fuel your body, feed your soul.</h1>
-            <h1 class="mt-3 fw-bold" style="font-size: 50px;">Nutrition Lovers</h1>
+  
+  side[0].innerHTML = ` <h1 class="fw-semibold mt-4" style="color: rgba(39, 39, 39, 0.701)">
+              Fuel your body, feed your soul.
+            </h1>
+            <h1 class="mt-3 fw-bold" style="font-size: 50px">
+              Nutrition Lovers
+            </h1>
             <p class="fw-medium mt-3 fs-5">
               Nutrition: the ultimate performance booster.
             </p>
             <h3 class="mt-4 fs-2" style="color: #264fd4">
-             ${sideArray[sidecount].h3}
+              All Natural Peanut Butter
             </h3>
-            <div class="mt-5 pt-3" style="width: 150px;">
+            <div
+              class="mt-sm-1 mt-vs-1 mt-lg-5 mt-md-5 pt-3"
+              style="width: 150px"
+            >
               <button
                 class="btn text-light fw-semibold mt-3"
                 type="button"
@@ -50,7 +58,7 @@ sideBtn[1].addEventListener("click", (e) => {
               >
                 Buy Now
               </button>
-            </div> `;
+            </div>`;
 
   side[1].innerHTML = ` <img
               class="img-fluid"
@@ -68,15 +76,22 @@ sideBtn[0].addEventListener("click", () => {
   if (sidecount < 0) {
     return;
   }
-  side[0].innerHTML = ` <h1 class="fw-semibold mt-4" style="color: rgba(39, 39, 39, 0.701);">Fuel your body, feed your soul.</h1>
-            <h1 class="mt-3 fw-bold" style="font-size: 50px;">Nutrition Lovers</h1>
+  side[0].innerHTML = `<h1 class="fw-semibold mt-4" style="color: rgba(39, 39, 39, 0.701)">
+              Fuel your body, feed your soul.
+            </h1>
+            <h1 class="mt-3 fw-bold" style="font-size: 50px">
+              Nutrition Lovers
+            </h1>
             <p class="fw-medium mt-3 fs-5">
               Nutrition: the ultimate performance booster.
             </p>
             <h3 class="mt-4 fs-2" style="color: #264fd4">
-             ${sideArray[sidecount].h3}
+              All Natural Peanut Butter
             </h3>
-            <div class="mt-5 pt-3" style="width: 150px;">
+            <div
+              class="mt-sm-1 mt-vs-1 mt-lg-5 mt-md-5 pt-3"
+              style="width: 150px"
+            >
               <button
                 class="btn text-light fw-semibold mt-3"
                 type="button"
@@ -112,11 +127,4 @@ document.querySelectorAll("ul li a").forEach((a) => {
   });
 });
 
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  if (this.checkValidity()) {
-    alert("Form submitted successfully");
-  } else {
-    this.reportValidity();
-  }
-});
+
