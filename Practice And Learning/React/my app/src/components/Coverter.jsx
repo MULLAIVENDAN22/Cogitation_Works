@@ -38,12 +38,10 @@ export default function Converter() {
   return (
     <div
       style={{
-        maxWidth: "420px",
-        margin: "40px auto",
+        width: "45%",
         padding: "24px",
         borderRadius: "16px",
         boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
       }}
     >
       <h2 style={{ marginBottom: "16px", textAlign: "center" }}>
@@ -101,7 +99,7 @@ export default function Converter() {
           style={{
             marginTop: "20px",
             padding: "6px 10px",
-            borderRadius: "999px",
+            borderRadius: "50%",
             border: "none",
             cursor: "pointer",
             boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
@@ -132,10 +130,10 @@ export default function Converter() {
       </div>
 
       <div
+        className="text-center p-3"
         style={{
           background: "#f6f6f6",
           borderRadius: "12px",
-          padding: "12px 14px",
           fontSize: "15px",
         }}
       >
