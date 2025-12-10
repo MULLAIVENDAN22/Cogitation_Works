@@ -1,0 +1,28 @@
+#root {
+  background-color: rgb(55, 55, 55);
+  display: grid;
+  place-items: center;
+  /* color: rgb(17, 255, 235); */
+  height: 100vh; /* force overflow so scrollbar appears */
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: rgb(55, 55, 55);
+}
+
+/* Handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: rgb(157, 157, 157); /* different color so it's visible */
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(152, 152, 152);
+}

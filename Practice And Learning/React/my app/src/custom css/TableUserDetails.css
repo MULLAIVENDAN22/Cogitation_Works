@@ -1,0 +1,13 @@
+table, th, td{
+    border: 2px solid rgb(134, 134, 134);
+    border-collapse: collapse;
+}
+
+th,td{
+    text-align: left;
+    padding: 7px;
+}
+
+th{
+  font-weight: 700;
+}

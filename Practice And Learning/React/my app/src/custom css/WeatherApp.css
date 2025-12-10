@@ -1,0 +1,36 @@
+#root{
+    background-color: rgb(79, 76, 255);
+}
+
+.weatherApp{
+    background-color: white;
+    border-radius: 20px;
+    width: 35%;
+    height: auto;
+}
+
+.border{
+  border: 3px solid rgb(33, 129, 255) !important;
+  border-radius: 15px;
+}
+
+input, input:focus{
+  border: none !important;
+  outline: none !important;
+}
+
+.country{
+    color: rgb(114, 114, 114);
+}
+
+.area{
+    color: #4a4a4a;
+}
+
+.footer{
+    color: rgb(162, 162, 162);
+}
+
+.footer span{
+    color: rgb(98, 98, 98);
+}
