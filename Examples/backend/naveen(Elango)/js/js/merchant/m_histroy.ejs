@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #183cef;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar .logo img {
+            width: 250px;
+            height: 100px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #0829ae;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-content .header {
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-content .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .name {
+            margin-right: 15px; /* Space between the name and settings icon */
+        }
+
+        .settings-dropdown {
+            display: none; /* Initially hide the dropdown */
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .settings-dropdown.show {
+            display: block; /* Show dropdown when toggled */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+        
+        .main-content .header .settings {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .main-content .header .settings-dropdown {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: #ffffff; /* Changed background color */
+            border: 1px solid #ddd;
+            padding: 10px;
+            display: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        
+        .main-content .header .settings-dropdown.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(5px);
+        }
+        
+        .main-content .header .settings-dropdown li {
+            margin-bottom: 10px;
+        }
+        
+        .main-content .header .settings-dropdown a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: block; /* Make the entire area clickable */
+        }
+        
+        .main-content .header .settings-dropdown a:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+        
+        /* User Icon Styles */
+        .settings-icon {
+            font-size: 20px; /* Increased size for better visibility */
+            color: #fff; /* Icon color */
+            background: linear-gradient(135deg, #2196f3, #4caf50); /* Gradient background */
+            border-radius: 50%; /* Circular background */
+            padding: 10px; /* Padding for the circle */
+            margin-right: 10px; /* Margin for spacing */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+            cursor: pointer; /* Make the icon clickable */
+        }
+        
+        .settings-icon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Dropdown Menu Styles */
+        .dropdown-menu {
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f0f0f0;
+        }
+        
+        /* Product Card Styles */
+        .product-item {
+            margin-bottom: 20px;
+        }
+        
+        .product-img {
+            height: 200px; /* Set a fixed height for the image */
+            width: 100%; /* Set the width to 100% to maintain aspect ratio */
+            object-fit: cover; /* Ensure the image covers the entire area */
+            border-radius: 10px 10px 0 0; /* Add rounded corners to the top */
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="images/logo1.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="/merchant">Dashboard</a></li>
+            <li><a href="/add_item">Add item</a></li>
+            <li><a href="/manage_Item">Manage Item</a></li>
+            <li><a href="/pending_orders">Pending orders</a></li>
+            <li><a href="/confirm_orders">Confirm orders</a></li>
+            <li><a href="/m_profile">Profile</a></li>
+            <li><a href="/m_histroy">Histroy</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Merchant Dashboard</h1>
+            <div class="header-right">
+                <h4 class="name">Hii, <%= session.username %>!</h4>
+                <div class="settings">
+                    <i class="fa fa-user settings-icon" id="settings-icon"></i>
+                    <ul class="settings-dropdown" id="settings-dropdown">
+                        <li><a href="#" style="background-color: #2196f3; color: #fff; border-radius: 5px; padding: 10px;">My Profile</a></li>
+                        <li><a href="/logout" style="background-color: #e74c3c; color: #fff; border-radius: 5px; padding: 10px;">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Cards -->
+        <div class="col-lg-9">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <% if(result.length > 0) { %>
+                                    <% for(var i = 0; i < result.length; i++) { %>
+                                        <div class="<%= (result.length === 1) ? 'col-12' : (result.length === 2) ? 'col-md-6' : 'col-md-4' %> mb-4">
+                                            <div class="card product-item border-0">
+                                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                                                    <img class="img-fluid w-100" src="img/<%= result[i].item_image %>" alt="Item Image" style="height: 200px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                                                </div>
+                                                <div class="card-footer d-flex justify-content-between align-items-center bg-light border">
+                                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#productModal<%= result[i].booking_id %>">
+                                                        <i class="fas fa-eye text-white mr-1"></i> View Detail
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Modal for View Detail -->
+                                            <div class="modal fade" id="productModal<%= result[i].booking_id %>" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="productModalLabel"><%= result[i].item_name %></h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <img src="img/<%= result[i].item_image %>" alt="Item Image" class="img-fluid">
+                                                            <p>Item Name: <%= result[i].item_name %></p> <!-- Added Item Name -->
+                                                            <p>Amount: <%= result[i].event_amount %></p>
+                                                            <p>Description: <%= result[i].item_description %></p> <!-- Ensure this field exists in your query -->
+                                                            <p>Merchant: <%= result[i].merchant_name %></p>
+                                                            <p>User: <%= result[i].user_name %></p> <!-- Added User Name -->
+                                                            <p>Start Date: <%= result[i].start_date %></p>
+                                                            <p>End Date: <%= result[i].end_date %></p>
+                                                            <p>Event Address: <%= result[i].event_address %></p>
+                                                            <p>Status: <%= result[i].status %></p> <!-- Added Status -->
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                <% } else { %>
+                                    <h1 class="text-center">No Items are Available</h1>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('settings-icon').addEventListener('click', function() {
+            document.getElementById('settings-dropdown').classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.settings')) {
+                document.getElementById('settings-dropdown').classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

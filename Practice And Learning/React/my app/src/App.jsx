@@ -1,7 +1,12 @@
 import "./App.css";
+import BMI from "./components/BMI";
+import Calender from "./components/Calender";
 import Converter from "./components/Coverter";
+import DigitalClock from "./components/DigitalClock";
+import PasswordGenerator from "./components/PasswordGenerator";
 import Practice from "./components/Practice";
 import Qrcode from "./components/Qrcode";
+import QuizApp from "./components/QuizApp";
 import QuoteRandom from "./components/QuoteRandom";
 import TableUserDetails from "./components/TableUserDetails";
 import UserDetails from "./components/userDetails";
@@ -15,7 +20,12 @@ function App() {
 
   return (
     <>
-      <Converter />
+      <QuizApp />
+      {/* <Calender /> */}
+      {/* <PasswordGenerator /> */}
+      {/* <DigitalClock /> */}
+      {/* <BMI /> */}
+      {/* <Converter /> */}
       {/* <WeatherApp /> */}
       {/* <QuoteRandom /> */}
       {/* <TableUserDetails /> */}

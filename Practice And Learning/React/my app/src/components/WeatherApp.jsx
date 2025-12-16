@@ -15,9 +15,9 @@ const iconid = {
   "50d": "snow",
 };
 
-function Result({weather}) {
-    // console.log(weather);
-    
+function Result({ weather }) {
+  // console.log(weather);
+
   return (
     <div className="text-center">
       <div className="d-flex justify-content-center align-items-center my-3">
@@ -72,8 +72,6 @@ function Result({weather}) {
   );
 }
 
-
-
 const WeatherApp = () => {
   const [city, setCity] = useState("chennai");
   const [notFound, setNotFound] = useState(false);
@@ -89,10 +87,13 @@ const WeatherApp = () => {
     wind: 78,
   });
 
-  useEffect(function () {
-    GetWeather()
-    setClicked(true)
-},[])
+  useEffect(
+    function () {
+      GetWeather();
+      setClicked(true);
+    },
+    [city]
+  );
 
   function search(e) {
     if (e.code === "Enter" && e.target.value) {
@@ -100,7 +101,6 @@ const WeatherApp = () => {
       setClicked(true);
     }
   }
-  
 
   const GetWeather = async () => {
     // console.log(city, "sss");
@@ -153,8 +153,8 @@ const WeatherApp = () => {
           }}
         ></i>
       </div>
-      {clicked && !notFound  && <Result weather={weather} />}
- 
+      {clicked && !notFound && <Result weather={weather} />}
+
       {notFound && <p className="fw-bold text-center my-4">City Not Found</p>}
       <div>
         <h6 className="footer text-center mt-4">

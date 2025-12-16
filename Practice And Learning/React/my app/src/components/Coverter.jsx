@@ -1,40 +1,53 @@
 import React, { useState, useEffect } from "react";
 
-const RATES = {
-  USD: 1,
-  INR: 83.2,
-  EUR: 0.92,
-  GBP: 0.79,
-  JPY: 147.3,
-};
+const topCurrencies = [
+  "USD", // US Dollar
+  "EUR", // Euro
+  "JPY", // Japanese Yen
+  "GBP", // British Pound
+  "AUD", // Australian Dollar
+  "CAD", // Canadian Dollar
+  "CHF", // Swiss Franc
+  "CNY", // Chinese Yuan
+  "HKD", // Hong Kong Dollar
+  "NZD", // New Zealand Dollar,
+  "INR",
+];
 
-const CURRENCIES = Object.keys(RATES);
 
 export default function Converter() {
   const [amount, setAmount] = useState("1");
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("INR");
   const [convertedAmount, setConvertedAmount] = useState("");
+  const [error, setError] = useState(false);
 
-  useEffect(() => {
-    const numericAmount = parseFloat(amount);
-    if (isNaN(numericAmount) || numericAmount < 0) {
-      setConvertedAmount("");
+  function changes(e) {
+    setAmount(e.target.value);
+    
+  }
+
+  async function convertAmount() {
+    if (amount <= 0 || !amount) {
+      setError(true);
       return;
     }
+    const response = await fetch(`https://v6.exchangerate-api.com/v6/ad1a74dba5c64932a61e6006/latest/${fromCurrency}`)
+    const data = await response.json()
+    setConvertedAmount((amount * data?.conversion_rates[toCurrency]).toFixed(2));
+    console.log(convertedAmount)
+    
+    setError(false);
+  }
 
-    // convert "from" → USD → "to"
-    const inUsd = numericAmount / RATES[fromCurrency];
-    const result = inUsd * RATES[toCurrency];
+  function switchCurrency() {
+    const temp = fromCurrency
+    setFromCurrency(toCurrency)
+    setToCurrency(temp)
+  }
 
-    setConvertedAmount(result.toFixed(2));
-  }, [amount, fromCurrency, toCurrency]);
-
-  const handleSwap = () => {
-    setFromCurrency(toCurrency);
-    setToCurrency(fromCurrency);
-  };
-
+  useEffect(()=>{convertAmount()},[])
+  useEffect(()=>{convertAmount()},[amount,fromCurrency, toCurrency])
   return (
     <div
       style={{
@@ -53,7 +66,7 @@ export default function Converter() {
         type="number"
         min="0"
         value={amount}
-        onChange={(e) => setAmount(e.target.value)}
+        onChange={changes}
         style={{
           width: "100%",
           padding: "10px 12px",
@@ -77,7 +90,7 @@ export default function Converter() {
           <label style={{ fontSize: "14px" }}>From</label>
           <select
             value={fromCurrency}
-            onChange={(e) => setFromCurrency(e.target.value)}
+            onChange={(e)=>{setFromCurrency(e.target.value)}}
             style={{
               width: "100%",
               padding: "8px 10px",
@@ -85,17 +98,19 @@ export default function Converter() {
               border: "1px solid #ddd",
             }}
           >
-            {CURRENCIES.map((cur) => (
-              <option key={cur} value={cur}>
-                {cur}
-              </option>
-            ))}
+            {topCurrencies.map((values) => {
+              return (
+                <option key={values} value={values}>
+                  {values}
+                </option>
+              );
+            })}
           </select>
         </div>
 
         <button
           type="button"
-          onClick={handleSwap}
+          onClick={switchCurrency}
           style={{
             marginTop: "20px",
             padding: "6px 10px",
@@ -112,7 +127,7 @@ export default function Converter() {
           <label style={{ fontSize: "14px" }}>To</label>
           <select
             value={toCurrency}
-            onChange={(e) => setToCurrency(e.target.value)}
+            onChange={(e)=>{setToCurrency(e.target.value)}}
             style={{
               width: "100%",
               padding: "8px 10px",
@@ -120,11 +135,13 @@ export default function Converter() {
               border: "1px solid #ddd",
             }}
           >
-            {CURRENCIES.map((cur) => (
-              <option key={cur} value={cur}>
-                {cur}
-              </option>
-            ))}
+            {topCurrencies.map((values) => {
+              return (
+                <option key={values} value={values} disabled={fromCurrency === values}>
+                  {values}
+                </option>
+              );
+            })}
           </select>
         </div>
       </div>
@@ -137,7 +154,7 @@ export default function Converter() {
           fontSize: "15px",
         }}
       >
-        {convertedAmount !== "" ? (
+        {!error ? (
           <>
             <strong>{amount || 0}</strong> {fromCurrency} ={" "}
             <strong>{convertedAmount}</strong> {toCurrency}

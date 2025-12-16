@@ -1,0 +1,55 @@
+#root {
+  background-color: rgb(110, 161, 233);
+}
+
+.Calender {
+  background-color: white !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  width: 75%;
+  /* height: 90%; */
+}
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 boxes per row */
+  gap: 4.5%; /* spacing between boxes */
+  max-height: 470px !important;
+}
+
+.box {
+  background-color: #6a8fb7;
+  text-align: center;
+  border: 1px solid #6d6d6d;
+  margin-bottom: 4px;
+  height: 100px !important;
+  width: 100px !important;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.box:hover {
+  background-color: #4f7298;
+}
+
+.box:focus {
+  background-color: #295358;
+}
+
+.box {
+  background-color: #6a8fb7;
+  text-align: center;
+  border: 1px solid #6d6d6d;
+  margin-bottom: 4px;
+  height: 90px !important;
+  width: 90px !important;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+select {
+  max-height: 500px !important;
+  overflow-y: scroll;
+}

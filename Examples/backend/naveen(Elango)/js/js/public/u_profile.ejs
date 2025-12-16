@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f1f1f1; /* Light background for the whole page */
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff; /* White background for the form */
+            padding: 30px; /* Increased padding for better spacing */
+            border-radius: 10px; /* More rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for a floating effect */
+            transition: transform 0.3s ease; /* Animation for hover effect */
+        }
+
+        .profile-container:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+
+        h3 {
+            text-align: center; /* Center the heading */
+            margin-bottom: 20px; /* Space below the heading */
+            color: #343a40; /* Darker text color for better readability */
+            font-size: 24px; /* Increased font size */
+            position: relative; /* For animation effect */
+        }
+
+        h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #007bff; /* Blue underline */
+            margin: 10px auto 0; /* Center the line */
+            transition: width 0.3s; /* Animation for underline */
+        }
+
+        h3:hover::after {
+            width: 70px; /* Expand underline on hover */
+        }
+
+        .form-group {
+            margin-bottom: 20px; /* Increased space between form groups */
+            position: relative; /* For animation effect */
+        }
+
+        label {
+            font-weight: bold; /* Make labels bold */
+            color: #495057; /* Darker color for labels */
+            transition: color 0.3s; /* Smooth transition for label color */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px; /* Increased padding for better touch targets */
+            border: 1px solid #ced4da; /* Border color */
+            border-radius: 5px; /* Rounded input borders */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus */
+        }
+
+        input:focus {
+            border-color: #80bdff; /* Change border color on focus */
+            outline: none; /* Remove outline */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
+        }
+
+        button {
+            width: 100%;
+            padding: 12px; /* Increased button padding */
+            background-color: #007bff; /* Primary button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+
+        #message {
+            margin-top: 15px;
+            color: green;
+            text-align: center; /* Center the message */
+            font-size: 18px; /* Increased font size */
+            font-weight: bold; /* Make message bold */
+        }
+
+        .form-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .form-column {
+            width: 45%; /* Adjusted width for columns */
+        }
+
+        @media (max-width: 768px) {
+            .form-columns {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+            .form-column {
+                width: 100%; /* Full width for each column */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row align-items-center py-3 px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="#" class="text-decoration-none">
+                    <img src="assets/images/logo1.png" alt="Logo" width="250">
+                </a>
+            </div>
+            <div class="col-lg-9 col-6 text-right">
+                <h4 class="name">Hii, <%= session.username %>!</h4>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid mb-5">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                    <h6 class="m-0">Categories</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+                    <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                        <br><a href="/home" class="nav-item nav-link">Dashboard</a><br>
+                        <a href="/u_profile" class="nav-item nav-link">Profile </a><br>
+                        <a href="/item" class="nav-item nav-link">Shop</a><br>
+                        <a href="/user_orders" class="nav-item nav-link">Orders</a><br>
+                        <a href="/all_user_orders" class="nav-item nav-link">Booking Histroy</a>
+                    </div>
+                </nav>
+            </div>
+        
+    <!-- Navbar End -->
+
+
+    <!-- Profile Update Form -->
+    <div class="profile-container">
+        <h3>USER PROFILE</h3>
+        <form id="profileForm" method="POST" action="/update-profile">
+            <input type="hidden" name="userId" value="<%= user.id %>">
+            <div class="form-columns">
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="<%= user.name %>" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" value="<%= user.dob.toISOString().split('T')[0] %>" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="<%= user.email %>" disabled>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" name="phone" value="<%= user.phone %>" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="u_password">Current Password:</label>
+                        <input type="password" id="u_password" name="u_password" value="<%= user.u_password %>" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_password">Change Password:</label>
+                        <input type="password" id="new_password" name="password" placeholder="Enter new password" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Change Password</button>
+        </form>
+    </div>
+    <!-- Profile Update Form End -->
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code .jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

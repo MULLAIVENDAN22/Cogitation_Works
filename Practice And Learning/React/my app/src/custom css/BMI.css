@@ -1,0 +1,41 @@
+.bmi{
+    background-color: white;
+    border-radius: 20px;
+    width: 75%;
+    height: auto;
+}
+
+#root{
+    background-color: rgb(167, 15, 255);
+}
+
+.head{
+    color: rgb(64, 64, 64);
+}
+
+.border{
+  border: 3.5px solid rgb(174, 174, 174) !important;
+  display: block;
+  border-radius: 10px;
+  outline: none;
+}
+.border:focus{
+  border: 3.5px solid rgb(79, 79, 79) !important;
+ 
+}
+
+input,input:focus{
+  border: black !important;
+  
+  outline: none !important;
+}
+
+input{
+    color: rgb(83, 83, 83);
+}
+ 
+
+.result{
+    border: 3px solid rgb(96, 94, 94);
+    border-radius: 10px;
+}
