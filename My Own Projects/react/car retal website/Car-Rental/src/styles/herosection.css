@@ -1,0 +1,53 @@
+.floating-img {
+  height: 200px;
+  width: 200px;
+}
+.floating-img img {
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Green checkbox when checked */
+.suv .form-check-input:checked {
+  background-color: green;
+  border-color: green;
+}
+
+/* Green outline when focused */
+.suv .form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 128, 0, 0.25);
+  border-color: green;
+}
+
+
+/* Checked state: green background + green border */
+.btn-check:checked + .custom-toggle {
+  background-color: rgb(56, 158, 56);
+  border-color: rgb(56, 158, 56);
+  color: #fff; /* keep text readable */
+}
+
+.greeninp:focus {
+  outline: none !important; /* remove default browser outline */
+  box-shadow: 0 0 0 3px rgb(167, 187, 167) !important; /* thickness & color */
+  border-color: rgb(
+    156,
+    185,
+    156
+  ) !important; /* optional: change border itself */
+}
+
+#timeDropdown:focus {
+  outline: none !important; /* remove default browser outline */
+  box-shadow: 0 0 0 3px rgb(167, 187, 167) !important; /* thickness & color */
+  border-color: rgb(156, 185, 156) !important; /* custom border color */
+}
+
+.dropdown-menu {
+  height: 300px; /* fixed height */
+  overflow-y: auto; /* scroll when content exceeds height */
+  border: 1px solid #000; /* default border */
+}
+

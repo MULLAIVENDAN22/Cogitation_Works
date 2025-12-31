@@ -1,0 +1,22 @@
+.cards {
+  border-radius: 25px;
+}
+
+.travel-deal {
+  background-color: #f0f1f5ac;
+}
+.cards {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.cards img {
+  border-radius: 25px;
+}
+
+.cards:hover {
+  transform: scale(1.02);
+}
+.cards h5{
+    margin-top: 50px;
+}

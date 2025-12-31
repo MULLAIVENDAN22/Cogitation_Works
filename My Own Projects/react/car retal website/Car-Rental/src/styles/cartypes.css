@@ -1,0 +1,17 @@
+.cartypes-main-h1 h1 {
+  font-size: 35px;
+}
+
+.grey {
+  color: #515151;
+}
+
+.carttypescontent {
+  height: 280px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.carttypescontent button {
+  margin-top: auto;
+}

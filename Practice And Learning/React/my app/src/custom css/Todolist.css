@@ -1,0 +1,56 @@
+#root {
+  background-color: #dddddd;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.todolist {
+  height: 95%;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.greyc {
+  color: rgb(58, 61, 71);
+}
+
+.darkgreyc {
+  color: rgb(146, 147, 151);
+}
+
+input {
+  border: 2px solid rgb(111, 113, 128) !important;
+}
+
+.toggle {
+  border: 2px solid #273747;
+}
+
+.toggle-selected {
+  background-color: #273747;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-selected:hover {
+  background-color: #273747;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.display{
+    overflow-y: scroll;
+    background-color: rgb(247, 247, 247);
+    padding: 0 40px;
+    max-height: 250px;
+}
+
+

@@ -8,19 +8,20 @@ import Practice from "./components/Practice";
 import Qrcode from "./components/Qrcode";
 import QuizApp from "./components/QuizApp";
 import QuoteRandom from "./components/QuoteRandom";
+import ReducePractice from "./components/reducePractice";
+import ReduxTesting from "./components/ReduxTesting";
 import TableUserDetails from "./components/TableUserDetails";
+import TodoList from "./components/TodoList";
 import UserDetails from "./components/userDetails";
 import WeatherApp from "./components/WeatherApp";
 
 function App() {
-  const arr1 = [
-    { id: 1, name: "eif" }, // id is number
-    { id: 2, name: "efe" }, // id is number
-  ];
-
   return (
     <>
-      <QuizApp />
+      <TodoList />
+      {/* <ReduxTesting /> */}
+      {/* <ReducePractice /> */}
+      {/* <QuizApp /> */}
       {/* <Calender /> */}
       {/* <PasswordGenerator /> */}
       {/* <DigitalClock /> */}

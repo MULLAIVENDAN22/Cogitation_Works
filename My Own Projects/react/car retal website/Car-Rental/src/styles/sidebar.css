@@ -1,0 +1,13 @@
+.list-group-item {
+  border: none !important;
+  margin-top: 5px !important;
+  font-weight: 400 !important;
+}
+.list-group {
+  background-color: white !important;
+}
+
+
+.list-group .list-group-item:hover{
+  background-color: #e6ebef !important;
+}

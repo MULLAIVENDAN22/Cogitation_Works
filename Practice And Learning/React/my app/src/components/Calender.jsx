@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // import "../custom css/Calender.css";
-import "bootswatch/dist/flatly/bootstrap.min.css";
+// import "bootswatch/dist/flatly/bootstrap.min.css";
 import { useState } from "react";
 
 const Calender = () => {

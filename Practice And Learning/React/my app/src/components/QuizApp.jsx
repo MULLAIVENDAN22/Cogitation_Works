@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "bootswatch/dist/sketchy/bootstrap.min.css";
-import "../custom css/QuizApp.css";
+// import "bootswatch/dist/sketchy/bootstrap.min.css";
+// import "../custom css/QuizApp.css";
 
 const openTDBCategories = {
   "General Knowledge": 9,

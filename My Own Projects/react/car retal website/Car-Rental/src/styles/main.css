@@ -1,0 +1,9 @@
+.dullhover:hover {
+  background-color: #e6ebef !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.dullbg {
+  background-color: #bdbdbd;
+}
