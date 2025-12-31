@@ -8,7 +8,7 @@ import Practice from "./components/Practice";
 import Qrcode from "./components/Qrcode";
 import QuizApp from "./components/QuizApp";
 import QuoteRandom from "./components/QuoteRandom";
-import ReducePractice from "./components/reducePractice";
+import ReducePractice from "./components/ReducePractice";
 import ReduxTesting from "./components/ReduxTesting";
 import TableUserDetails from "./components/TableUserDetails";
 import TodoList from "./components/TodoList";
