@@ -12,7 +12,7 @@ import ReducePractice from "./components/ReducePractice";
 import ReduxTesting from "./components/ReduxTesting";
 import TableUserDetails from "./components/TableUserDetails";
 import TodoList from "./components/TodoList";
-import UserDetails from "./components/userDetails";
+import UserDetails from "./components/UserDetails";
 import WeatherApp from "./components/WeatherApp";
 
 function App() {
